@@ -1,0 +1,62 @@
+/* popup__button_active */
+    /* background:inherit;
+    color: rgba(0, 0, 0, 1);
+    opacity: 0.2;
+    border: 1px solid rgba(0, 0, 0, 1); */
+    /* pointer-events: auto;
+
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #000000;
+    min-width: 358px;
+    min-height: 50px;
+    margin: 48px 0 37px 0;
+    padding: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: opacity 0.3s ease; */
+
+
+.popup__button_active {
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #000000;
+    min-width: 358px;
+    min-height: 50px;
+    margin: 48px 0 37px 0;
+    padding: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    opacity: 1;
+    
+}
+
+.popup__button_active:hover {
+    opacity: 0.8;
+}
+
+
+@media (max-width: 600px) {
+    .popup__button_active {
+        min-width: 238px;
+        min-height: 46px;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 45px 0 25px 0;
+    }
+}
+
+/* background:inherit;
+color: rgba(0, 0, 0, 1);
+opacity: 0.2;
+border: 1px solid rgba(0, 0, 0, 1); */

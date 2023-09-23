@@ -1,0 +1,21 @@
+.popup__close {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .popup__close {
+        width: 20px;
+        height: 20px;
+        justify-content: flex-end;
+        align-items: flex-end;
+        right: 0px;
+    }
+}

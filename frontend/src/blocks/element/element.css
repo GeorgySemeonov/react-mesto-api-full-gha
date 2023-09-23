@@ -1,0 +1,8 @@
+.element {
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 282px auto;
+    grid-template-columns: auto 52px;
+}

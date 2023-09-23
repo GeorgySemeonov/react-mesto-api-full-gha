@@ -1,0 +1,16 @@
+.popup__input-error{
+    border-bottom-color: red;
+    font-weight: 400;
+    font-size: 12px;
+    color: red;
+    left: 36px;
+    padding-top: 7px;
+    position: absolute;
+    top: 204px;
+    width: 358px;
+}
+
+.popup__input-error:nth-child(2){
+    top: 140px;
+
+}

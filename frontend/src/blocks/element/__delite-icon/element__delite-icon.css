@@ -1,0 +1,11 @@
+.element__delite-icon {
+    width: 18px;
+    height: 19px;
+    padding: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.element__delite-icon:hover {
+    opacity: 0.6;
+}

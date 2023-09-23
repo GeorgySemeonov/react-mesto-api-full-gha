@@ -1,0 +1,17 @@
+.popup__close-icon {
+    width: 32px;
+    height: 32px;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .popup__close-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.popup__close-icon:hover {
+    opacity: 0.6;
+}

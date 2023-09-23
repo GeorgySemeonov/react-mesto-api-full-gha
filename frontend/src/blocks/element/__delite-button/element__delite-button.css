@@ -1,0 +1,11 @@
+.element__delite-button {
+    width: 18px;
+    height: 19px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    position: absolute;
+    justify-self: end;
+    margin-top: 20px;
+    margin-right: 20px;
+}
