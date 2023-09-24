@@ -45,6 +45,6 @@ class ApiAuth {
     }
   }
   
-  const apiAuth = new ApiAuth ('http://localhost:3000/');
+  const apiAuth = new ApiAuth ('http://project.mesto.josh.nomoredomainsrocks.ru/api/');
   
   export default apiAuth;

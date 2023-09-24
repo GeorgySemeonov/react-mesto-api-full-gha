@@ -4,7 +4,8 @@ const jwt = require('jsonwebtoken');
 
 const userModel = require('../models/user');
 // const user = require('../models/user');
-const JWT_SECRET = '123456789123456789';
+const { NODE_ENV, JWT_SECRET } = process.env;
+// const JWT_SECRET = '123456789123456789';
 const {
   HTTP_STATUS_OK,
   HTTP_STATUS_CREATED,
@@ -85,6 +86,7 @@ module.exports.getUserById = (req, res, next) => {
       }
     });
 };
+
 //     if (!user) {
 //       return res.status(HTTP_STATUS_NOT_FOUND).send({ message: " Пользователь не найден" });
 //   }
@@ -167,7 +169,7 @@ module.exports.login = (req, res, next) => {
           // return res.status(UNAUTHORIZED).send({ message: "Неверный пароль" });
         }
 
-        const token = jwt.sign({ _id: user._id }, JWT_SECRET, {
+        const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'secret', {
           expiresIn: '7d',
         });
         console.log(user._id);

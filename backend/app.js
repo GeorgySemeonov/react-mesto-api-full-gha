@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+require('dotenv').config();
 const cors = require('cors');
 
 const express = require('express');
@@ -15,7 +17,7 @@ const NotFoundError = require('./errors/NotFoundError');
 const auth = require('./middlewares/auth');
 
 const app = express();
-const port = 3000;
+const { PORT = 3000 } = process.env;
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb')
   .then(() => {
@@ -55,9 +57,6 @@ app.use(auth);
 app.use(CardsRouter);
 app.use(UserRouter);
 app.use('/*', (req, res, next) => next(new NotFoundError('Страница не найдена')));
-// app.use('/*', (req, res) => {
-//   res.status(HTTP_STATUS_NOT_FOUND).send({message: "Страница не найдена"});
-// }) ;
 
 app.use(errors());
 // eslint-disable-next-line no-unused-vars
@@ -69,6 +68,6 @@ app.use((err, req, res, next) => {
   console.log(message);
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
 });
