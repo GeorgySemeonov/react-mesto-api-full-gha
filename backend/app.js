@@ -25,8 +25,11 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb')
     console.log('No connection to DB');
   });
 app.use(cors());
-app.get('/', (req, res) => {
-  res.status(200).send('Hello!');
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадет');
+  }, 0);
 });
 
 app.use(express.json());
