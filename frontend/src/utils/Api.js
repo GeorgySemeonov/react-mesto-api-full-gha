@@ -87,7 +87,7 @@ class Api {
 
 const api = new Api({
   //url: "https://mesto.nomoreparties.co/v1/cohort-68",
-  url: "http://project.mesto.josh.nomoredomainsrocks.ru/api",
+  url: "http://project.mesto.josh.nomoredomainsrocks.ru",
   headers: {
    authorization: `Bearer ${localStorage.getItem('jwt')}`,
     'Content-Type': 'application/json',

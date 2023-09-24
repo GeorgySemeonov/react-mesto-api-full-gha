@@ -54,8 +54,8 @@ app.post('/api/sign-up', celebrate({
 }), createUser);
 
 app.use(auth);
-app.use(CardsRouter);
-app.use(UserRouter);
+app.use('/api', CardsRouter);
+app.use('/api', UserRouter);
 app.use('/*', (req, res, next) => next(new NotFoundError('Страница не найдена')));
 
 app.use(errors());
