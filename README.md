@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес 51.250.84.223
+IP-адрес https://51.250.84.223
 
-Frontend http://project.mesto.josh.nomoredomainsrocks.ru
+Frontend https://project.mesto.josh.nomoredomainsrocks.ru
 
-Backend http://project.mesto.josh.nomoredomainsrocks.ru/api
+Backend https://project.mesto.josh.nomoredomainsrocks.ru/api
