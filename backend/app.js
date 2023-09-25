@@ -13,6 +13,7 @@ const UserRouter = require('./routes/users');
 const { login, createUser } = require('./controllers/users');
 const { regexp } = require('./utils/regexp');
 const NotFoundError = require('./errors/NotFoundError');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const auth = require('./middlewares/auth');
 
@@ -35,6 +36,7 @@ app.get('/crash-test', () => {
 });
 
 app.use(express.json());
+app.use(requestLogger);
 
 app.post('/api/sign-in', celebrate({
   body: Joi.object().keys({
@@ -58,6 +60,7 @@ app.use('/api', CardsRouter);
 app.use('/api', UserRouter);
 app.use('/*', (req, res, next) => next(new NotFoundError('Страница не найдена')));
 
+app.use(errorLogger);
 app.use(errors());
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
