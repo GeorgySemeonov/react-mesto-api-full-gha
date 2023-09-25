@@ -5,7 +5,8 @@ const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
 // const { HTTP_STATUS_NOT_FOUND } = require('http2').constants;
-
+// eslint-disable-next-line import/no-extraneous-dependencies
+const helmet = require('helmet');
 const { errors } = require('celebrate');
 const { celebrate, Joi } = require('celebrate');
 const CardsRouter = require('./routes/cards');
@@ -28,6 +29,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb')
     console.log('No connection to DB');
   });
 app.use(cors());
+app.use(helmet());
 
 app.get('/crash-test', () => {
   setTimeout(() => {
